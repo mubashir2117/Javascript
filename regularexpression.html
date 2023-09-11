@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="">Name</label>
+    <input type="text" name="" id="fame">
+    <p id="demo"></p>
+    <button type="submit" onclick="myfunction()">Submit</button>
+    <script>
+        function myfunction() {
+        //     var uname = /^[A-z_.]{3,9}$/gm;
+        //     var fame = document.getElementById("fame").value;
+        //     var result = uname.test(fame);
+        // var uemail = /^[a-z0-9_.]{3,}@[a-z]{3,10}.[a-z]{2,6}$/gm;
+        // var fame = document.getElementById("fame").value;
+        //var result =  uemail.test(fame);
+        var uphone = /^[0-9]{4}-[0-9]{7}$/gm;
+        var fame = document.getElementById("fame").value;
+        var result =  uphone.test(fame);
+
+            if (result) {
+                text = "Okay"
+            } else {
+                text = "Fail"
+            }
+            document.getElementById("demo").innerHTML = text;
+            document.getElementById("demo").style.color = "red"
+            document.getElementById("demo").style.fontFamily = "Cursive ";
+        }
+    </script>
+</body>
+</html>

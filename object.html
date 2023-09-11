@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var student = {
+            fname: "Mubashir",
+            lname: "khan",
+            Email: "mubashiraptech21@gmail.com",
+            dob: "17-06-2007",
+            favfood : ["Zinger", "Burger", "Pasta", "Macroni" ],
+            Salary : function(){
+                return 10000000
+            },
+            fullname :  function () {
+                return this.fname + " " + this.lname;
+            },
+            location :{
+                country: "Pakistan",
+                city: "karachi"
+            }
+        }
+        document.write(student.fname , "<br>")
+        document.write(student.favfood[2] , "<br>")
+        document.write(student.Salary(), "<br>")
+        document.write(student.fullname(), "<br>")
+        document.write(student.location.country)
+    </script>
+</body>
+
+</html>

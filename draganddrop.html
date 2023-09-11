@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #div1{
+        border: 5px solid blue;
+        padding: 10px;
+        width: 200px;
+        height: 100px;
+        
+    }
+    #div2{
+        border: 5px solid red;
+        padding: 10px;
+        width: 200px;
+        height: 100px;
+        margin-left: 70%;
+    }   
+     #div3{
+        border: 5px solid red;
+        padding: 10px;
+        width: 200px;
+        height: 100px;
+    }
+</style>
+<body>
+    <div id="div1" ondrop="drop_image(event)" ondragover="allow_drop(event)">
+    <img src="download4.jpg" height="100px" width="150px" id="img" draggable="true" ondragstart="drag_image(event)" alt=""></div>
+    <br>
+    <br>
+    <div id="div2" ondrop="drop_image(event)" ondragover="allow_drop(event)">
+        <img src="download6.jpg" height="100px" width="150px" id="img" draggable="true" ondragstart="drag_image(event)" alt=""></div></div>
+        <div id="div3" ondrop="drop_image(event)" ondragover="allow_drop(event)"></div>
+        
+   <script>
+    function drag_image(event) {
+        event.dataTransfer.setData("image" , event.target.id);
+    }
+    function allow_drop(event) {
+        event.preventDefault()
+    }
+    function drop_image(event) {
+        var data = event.dataTransfer.getData("image");
+        event.target.appendChild(document.getElementById(data)) 
+    }
+   </script>
+</body>
+</html>
