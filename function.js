@@ -16,8 +16,14 @@
 // var name = prompt("Enter your name");
 // document.write(greeting(name))
 
-function add(num1, num2){
-    return num1 + num2;
-}
+// function add(num1, num2){
+//     return num1 + num2;
+// }
 
-document.write(add(72,12));
+// document.write(add(712,152));
+
+function demo(num , name){
+    document.write(num +" " + name)
+}
+demo( "Mubashir",1)
+
